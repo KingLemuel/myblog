@@ -1,0 +1,32 @@
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.4em;
+  color: #000;
+  
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Body */
+
+body {
+  background-image: image-url("use_your_illusion.png");
+}
+
+
+/* Footer */
+
+footer {
+  color: #fff;
+}
+
