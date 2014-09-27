@@ -1,3 +1,5 @@
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Orbitron:700,400|Cookie);
 /* header */
 
 #logo {
@@ -6,10 +8,12 @@
   font-size: 1.4em;
   color: #000;
   
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  
+  font-family: 'Orbitron', sans-serif;
 }
 
 #logo:hover {
@@ -21,12 +25,56 @@
 
 body {
   background-image: image-url("use_your_illusion.png");
+  margin-top: 75px;
+  color: #fff;
 }
+
+/* Home Page */
+
+#home {
+  text-align: center;
+  line-height: 10px;
+  letter-spacing: 1px;
+}
+
+#propic {
+  width: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+#content-mid h1{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+#pHome {
+  margin-top: 40px;
+}
+
+#content-mid p{
+  font-size: 1.2em;
+  margin-top: 30px;
+}
+
+.halfblue{
+  color: blue;
+}
+
+
 
 
 /* Footer */
 
 footer {
   color: #fff;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  margin-left: 100px;
 }
 
