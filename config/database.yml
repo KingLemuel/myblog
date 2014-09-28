@@ -15,3 +15,12 @@ test:
   host: localhost
   username: action
   password:
+  
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: myblog-prod
+  pool: 5
+  host: localhost
+  username: action
+  password:
