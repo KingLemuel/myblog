@@ -21,11 +21,32 @@
   text-decoration: none;
 }
 
+#navList a{
+  color: #000;
+}
+#navList li {
+  display: inline;
+  list-style-type: none;
+  
+  float: right;
+  margin-left: 10px;
+  font-size: 1.1em;
+  color: #000;
+  
+  letter-spacing: 1px;
+  padding-top: 13px;
+  line-height: 1;
+  font-family: 'Orbitron', sans-serif;
+}
+
 /* Body */
 
 body {
   background-image: image-url("use_your_illusion.png");
   margin-top: 75px;
+  /* Added padding is due to bootstrap note 
+  regarding fixed top nav */
+  padding-top: 70px; 
   color: #fff;
 }
 
