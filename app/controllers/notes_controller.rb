@@ -1,12 +1,11 @@
-class ArticlesController < ApplicationController
+class NotesController < ApplicationController
   def index
   end
   
   def show
   end
   
-  def new
-    @article = Article.new
+  def new 
   end
   
   def create
