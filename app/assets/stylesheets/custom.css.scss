@@ -21,6 +21,10 @@
   text-decoration: none;
 }
 
+
+
+
+
 #navList a{
   color: #000;
 }
@@ -86,8 +90,19 @@ body {
   color: blue;
 }
 
+#socialList {
+  width: 30%;
+  display: block;
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
 
-
+#socialList li {
+  float: left;
+  padding-left: 10px;
+}
 
 /* Footer */
 
