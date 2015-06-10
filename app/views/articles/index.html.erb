@@ -3,66 +3,43 @@
 	<!-- Body -->
 	<div class="container">
 		<div class="row">
+     <% @articles.each do |article| %>
 			<div class="col-md-8">
 
+       
 				<article>
-					<h2><a href="#">The Odin Project</a></h2>
+          
+					<h2><%= link_to article.title, article %></h2>
+          
 
 			        <div class="row">
 			          	<div class="col-sm-6 col-md-6">
-                    <% if false %>
-			         <span class="glyphicon glyphicon-folder-open"></span> &nbsp;<a href="#">Web Development</a> &nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> <a href="#">Aries</a>, <a href="#">Fire</a>, <a href="#">Mars</a> </div>
-			          	<div class="col-sm-6 col-md-6">
-			          		<span class="glyphicon glyphicon-pencil"></span> <a href="#">0 Comments</a>	%>		          	  	<% end %>
-			          		&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span> October 19, 2014 9:00 PM			          		
+                    Posted: <%= article.created_at.time %>	
+                   
 			          	</div>
 			          </div>
-
+          
 			          <hr>
-
+          
 			          <img src="http://www.campusghanta.com/wp-content/uploads/2012/04/Programming_OOP_Wallpaper_Red_by_hexeno-900x300.png" class="img-responsive">
-
 			          <br />
 
-			          <p class="lead">Web Development is not easy. However, that doesn’t mean it’s impossible either, there are just so many different technologies and tools that are required to be successful at it. (e.g, html, css, javascript, databases, web frameworks, jquery, xml, etc.) In a sense to be a complete developer requires proficiency at many different skills and in some cases specialized knowledge in areas such as machine learning.</p>
+			          <p class="lead">
+                  <%= article.content %>
+                </p>
+          
 					  <p class="text-right">
-				          <a href="#">
-				          	continue reading...
-				          </a>
+              <%= link_to "continue reading...", article %>
 				      </p>
 
 			          <hr>
-				</article>
-
-
-				
-					
-				<ul class="pager">
-					<li class="previous"><a href="#">&larr; Previous</a></li>
-					<li class="next"><a href="#">Next &rarr;</a></li>
-				</ul>
-
-			</div>
-			<div class="col-md-4">
-        
-        <!-- SocialIcons -->
-        <% if false %>
-        <div class="sideIcons">
-           <ul id="sideIcons">
-         <li>
-            <%= link_to(image_tag("LinkIn.png", :alt => "linked-in icon"), "https://www.linkedin.com/pub/lemuel-uhuru/63/a9a/7a8" , target: "_blank")  %>
-         </li>
-      
-         <li>
-            <%= link_to(image_tag("gI.png", :alt => "github icon"), "https://github.com/LemuelUhuru", target: "_blank")  %>
-         </li>
          
-         <li>
-           <%= link_to(image_tag("Twit.png", :alt => "twitter icon"), "https://twitter.com/LemuelUhuru", target: "_blank") %>
-         </li>
-       </ul>
-        </div>
-        <% end %>
+				</article>
+        
+        <%= will_paginate %>
+			</div>
+      
+			<div class="col-md-4">
 				<!-- Latest Posts -->
        <aside>
 				<div class="panel panel-default">
@@ -70,10 +47,9 @@
 						<h4>Latest Posts</h4>
 					</div>
 					<ul class="list-group">
-						<li class="list-group-item"><a href="singlepost.html">1. The Odin Project</a></li>
+            <li class="list-group-item"><%= link_to article.title, article %> </li>
 					</ul>
 				</div>
-
 				<!-- Categories -->
 				<div class="panel panel-default">
 					<div class="panel-heading">
@@ -85,5 +61,6 @@
 				</div>
        </aside>
 			</div>
+     <% end %>
 		</div>
 	</div>
