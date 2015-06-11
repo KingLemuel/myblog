@@ -1,0 +1,60 @@
+
+
+	<!-- Body -->
+	<div class="container">
+		<div class="row">
+     
+			<div class="col-md-8">
+
+       
+				<article>
+					<h2><%= link_to @article.title, @article %></h2>
+            <div class="row">
+                
+			          	<div class="col-sm-6 col-md-6">
+                    
+                    Posted: <%= @article.created_at.time %>	
+                   
+			          	</div>
+			          </div>
+          
+			          <hr>
+          
+			          <img src="http://www.campusghanta.com/wp-content/uploads/2012/04/Programming_OOP_Wallpaper_Red_by_hexeno-900x300.png" class="img-responsive">
+			          <br />
+
+			          <p class="lead">
+                  <%= @article.content %>
+                </p>
+          
+				</article>
+        
+        
+			</div>
+   
+			<div class="col-md-4">
+				<!-- Latest Posts -->
+       <aside>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Latest Posts</h4>
+					</div>
+					<ul class="list-group">
+          <%= @latest_articles.each do |article| %>
+            <li class="list-group-item"><%= link_to article.title, article %> </li>
+          <% end %>
+					</ul>
+				</div>
+				<!-- Categories -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Categories</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">Web Development</a></li>
+					</ul>
+				</div>
+       </aside>
+			</div>
+		</div>
+	</div>

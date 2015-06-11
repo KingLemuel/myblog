@@ -1,6 +1,14 @@
 class ArticlesController < ApplicationController
+  before_filter :show_latest_articles, :only => [:index, :show]
+
+  def show_latest_articles
+    @latest_articles = Article.order("id DESC")
+  end
+  
+  
+  
   def index
-    @articles = Article.paginate(page: params[:page])
+    @articles = Article.paginate(page: params[:page], per_page: 5)
   end
   
   def show

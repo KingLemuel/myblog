@@ -3,17 +3,17 @@
 	<!-- Body -->
 	<div class="container">
 		<div class="row">
-     <% @articles.each do |article| %>
+     
 			<div class="col-md-8">
 
        
 				<article>
-          
+          <% @articles.each do |article| %>
 					<h2><%= link_to article.title, article %></h2>
-          
-
-			        <div class="row">
+            <div class="row">
+                
 			          	<div class="col-sm-6 col-md-6">
+                    
                     Posted: <%= article.created_at.time %>	
                    
 			          	</div>
@@ -25,20 +25,20 @@
 			          <br />
 
 			          <p class="lead">
-                  <%= article.content %>
+                  <%= article.content.first(300) %>
                 </p>
           
 					  <p class="text-right">
               <%= link_to "continue reading...", article %>
 				      </p>
-
-			          <hr>
-         
+          <% end %>
+			          
+            <%= will_paginate %>
 				</article>
         
-        <%= will_paginate %>
+        
 			</div>
-      
+   
 			<div class="col-md-4">
 				<!-- Latest Posts -->
        <aside>
@@ -47,7 +47,9 @@
 						<h4>Latest Posts</h4>
 					</div>
 					<ul class="list-group">
+          <%= @latest_articles.each do |article| %>
             <li class="list-group-item"><%= link_to article.title, article %> </li>
+          <% end %>
 					</ul>
 				</div>
 				<!-- Categories -->
@@ -61,6 +63,5 @@
 				</div>
        </aside>
 			</div>
-     <% end %>
 		</div>
 	</div>
