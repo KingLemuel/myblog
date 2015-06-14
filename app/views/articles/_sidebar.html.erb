@@ -1,0 +1,24 @@
+<div class="col-md-4">
+				<!-- Latest Posts -->
+       <aside>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Latest Posts</h4>
+					</div>
+					<ul class="list-group">
+          <%= @latest_articles.each do |article| %>
+            <li class="list-group-item"><%= link_to article.title, article %> </li>
+          <% end %>
+					</ul>
+				</div>
+				<!-- Categories -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4>Categories</h4>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">Web Development</a></li>
+					</ul>
+				</div>
+       </aside>
+			</div>
