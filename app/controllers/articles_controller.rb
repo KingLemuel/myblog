@@ -8,11 +8,11 @@ class ArticlesController < ApplicationController
   
   
   def index
-    @articles = Article.paginate(page: params[:page], per_page: 5)
+    @articles = Article.friendly.all
   end
   
   def show
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
   end
   
   def new
