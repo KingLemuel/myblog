@@ -3,32 +3,24 @@
 	<!-- Body -->
 	<div class="container">
 		<div class="row">
-     
-			<div class="col-md-8">
-
-       
+			<div class="col-md-8">   
+        
 				<article>
 					<h2><%= link_to @article.title, @article %></h2>
             <div class="row">
-                
 			          	<div class="col-sm-6 col-md-6">
-                    
                     Posted: <%= @article.created_at.time %>	
-                   
 			          	</div>
 			          </div>
-          
 			          <hr>
-          
-			          <img src="http://www.campusghanta.com/wp-content/uploads/2012/04/Programming_OOP_Wallpaper_Red_by_hexeno-900x300.png" class="img-responsive">
+          <%= image_tag("#{@article.avatar_file_name}" , class: "img-responsive") %>
 			          <br />
-
+          
 			          <p class="lead">
                   <%= @article.content %>
                 </p>
           
-				</article>
-        
+				</article>      
         
 			</div>
       <%= render 'sidebar' %>
