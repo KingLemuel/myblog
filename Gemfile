@@ -34,6 +34,9 @@ gem 'aws-sdk', '~> 2'
 #friendly_id
 gem 'friendly_id', '~> 5.1.0'
 
+#figaro
+gem 'figaro'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
