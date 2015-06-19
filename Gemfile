@@ -28,6 +28,9 @@ gem 'bootstrap-will_paginate', '0.0.10'
 #paperclip
 gem "paperclip", "~> 4.2"
 
+#aws
+gem 'aws-sdk', '~> 2'
+
 #friendly_id
 gem 'friendly_id', '~> 5.1.0'
 
