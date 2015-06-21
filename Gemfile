@@ -29,13 +29,17 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem "paperclip", "~> 4.2"
 
 #aws
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2'
+
+
+#figaro
+gem 'figaro'
+
 
 #friendly_id
 gem 'friendly_id', '~> 5.1.0'
 
-#figaro
-gem 'figaro'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
