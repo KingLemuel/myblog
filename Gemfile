@@ -22,8 +22,8 @@ gem 'bootstrap-sass'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 #paginate
-gem 'will_paginate',           '3.0.7'
-gem 'bootstrap-will_paginate', '0.0.10'
+gem 'will_paginate', '~> 3.0.7'
+gem 'bootstrap-will_paginate'
 
 #paperclip
 gem "paperclip", "~> 4.2"
