@@ -39,6 +39,9 @@ gem 'figaro'
 #friendly_id
 gem 'friendly_id', '~> 5.1.0'
 
+#tinymce-rails
+gem 'tinymce-rails'
+
 
 
 # Use jquery as the JavaScript library
